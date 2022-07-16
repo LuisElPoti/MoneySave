@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,19 +69,43 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // textBox1
+            // linkLabel2
             // 
-            this.textBox1.Location = new System.Drawing.Point(39, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(280, 20);
-            this.textBox1.TabIndex = 0;
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(163, 238);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(49, 13);
+            this.linkLabel2.TabIndex = 6;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Registrar";
             // 
-            // textBox2
+            // label1
             // 
-            this.textBox2.Location = new System.Drawing.Point(39, 106);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(280, 20);
-            this.textBox2.TabIndex = 1;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(36, 238);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "¿No tienes una cuenta?";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(125, 197);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Log in";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(188, 154);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(131, 13);
+            this.linkLabel1.TabIndex = 3;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "¿Olvidaste tu contraseña?";
             // 
             // radioButton1
             // 
@@ -94,43 +118,19 @@
             this.radioButton1.Text = "Recordar usuario";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // linkLabel1
+            // textBox2
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(188, 154);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(131, 13);
-            this.linkLabel1.TabIndex = 3;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "¿Olvidaste tu contraseña?";
+            this.textBox2.Location = new System.Drawing.Point(39, 106);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(280, 20);
+            this.textBox2.TabIndex = 1;
             // 
-            // button1
+            // textBox1
             // 
-            this.button1.Location = new System.Drawing.Point(125, 197);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Log in";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 238);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "¿No tienes una cuenta?";
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(163, 238);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(49, 13);
-            this.linkLabel2.TabIndex = 6;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Registrar";
+            this.textBox1.Location = new System.Drawing.Point(39, 49);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(280, 20);
+            this.textBox1.TabIndex = 0;
             // 
             // label2
             // 
