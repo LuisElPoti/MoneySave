@@ -1,6 +1,6 @@
 ﻿namespace MoneySave
 {
-    partial class frmcuentas
+    partial class frmTipoIngreso
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // frmcuentas
+            // frmTipoIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(959, 562);
-            this.Name = "frmcuentas";
-            this.Text = "frmcuentas";
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ClientSize = new System.Drawing.Size(1064, 556);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "frmTipoIngreso";
+            this.Text = "frmRegistrarTransaccion";
             this.ResumeLayout(false);
 
         }

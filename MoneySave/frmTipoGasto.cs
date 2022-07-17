@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MoneySave
 {
-    public partial class frmPresupuesto : Form
+    public partial class frmTipoGasto : Form
     {
-        public frmPresupuesto()
+        public frmTipoGasto()
         {
             InitializeComponent();
         }
