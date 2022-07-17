@@ -25,7 +25,9 @@ namespace MoneySave
         public int IdCuenta { get; set; }
         public Nullable<int> IdUsuario { get; set; }
         public Nullable<decimal> Monto { get; set; }
-    
+        public DateTime CreatedDate { get; set; }
+        public string Descripcion { get; set; }
+
         public virtual Usuario Usuario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Gasto> Gastoes { get; set; }
