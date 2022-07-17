@@ -13,10 +13,10 @@ namespace MoneySave
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class GestorDeGastosEntities : DbContext
+    public partial class GestorDeGastosEntities1 : DbContext
     {
-        public GestorDeGastosEntities()
-            : base("name=GestorDeGastosEntities")
+        public GestorDeGastosEntities1()
+            : base("name=GestorDeGastosEntities1")
         {
         }
     
@@ -25,5 +25,12 @@ namespace MoneySave
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Cuenta> Cuentas { get; set; }
+        public virtual DbSet<Gasto> Gastoes { get; set; }
+        public virtual DbSet<Ingreso> Ingresoes { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<Tipogasto> Tipogastoes { get; set; }
+        public virtual DbSet<TipoIngreso> TipoIngresoes { get; set; }
+        public virtual DbSet<Usuario> Usuarios { get; set; }
     }
 }

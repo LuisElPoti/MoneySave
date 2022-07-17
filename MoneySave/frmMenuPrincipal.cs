@@ -43,10 +43,7 @@ namespace MoneySave
             AbrirFormHija(new frmRegistrarCuenta());
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void pnlBarra_MouseMove(object sender, MouseEventArgs e)
         {
@@ -74,6 +71,11 @@ namespace MoneySave
         private void frmMenuPrincipal_Load(object sender, EventArgs e)
         {
             btnInicio_Click(null, e);
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new frmReporte());
         }
 
         private void AbrirFormHija(object formhija)
