@@ -80,5 +80,18 @@ namespace MoneySave
         {
 
         }
+
+        private void btnlogin_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void AbrirFormulario(Form frm) //Recibe el formulario que deseo abrir
+        {
+            if (Application.OpenForms.Count < 2) //Verificamos que solamente este abierto el formulario de LogIn
+            {
+                frm.Show();
+            }
+            else MessageBox.Show("Cierre la funcionalidad abierta", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
 }
