@@ -85,7 +85,13 @@ namespace MoneySave
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
+            if (txtuser.Text != "USUARIO" && txtuser.TextLength > 2)
+            {
+                if (txtpass.Text != "CONTRASEÑA")
+                {
 
+                }
+            }
         }
         public void AbrirFormulario(Form frm) //Recibe el formulario que deseo abrir
         {
