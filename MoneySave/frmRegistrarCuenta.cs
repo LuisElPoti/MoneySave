@@ -72,6 +72,51 @@ namespace MoneySave
 
         }
 
-        
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvCuentas.SelectedRows.Count == 1)
+            {
+                if (MessageBox.Show("¿Realmente desea eliminar el doctor?", "AVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    CargarDatos();
+                    int vId = int.Parse(dgvCuentas.SelectedRows[0].Cells["ID"].Value.ToString());
+                                        
+                    datos.Delete(vId);
+                    LimpiarCampos();
+                    CargarGrid();
+                }
+            }
+            else MessageBox.Show("Seleccione una fila", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (dgvCuentas.SelectedRows.Count == 1)
+            {
+                if (MessageBox.Show("¿Desea actualizar el registro?", "AVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    CargarDatos();
+                    
+                    datos.Update(cuenta);
+                    LimpiarCampos();
+                    CargarGrid();
+                }
+            }
+            else MessageBox.Show("Seleccione una fila", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void dgvCuentas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex > -1)
+            {
+                DataGridViewRow dgv = dgvCuentas.Rows[e.RowIndex];
+                txtTipoCuenta.Text = dgv.Cells[1].Value.ToString();
+                txtMonto.Text = dgv.Cells[2].Value.ToString();
+                txtComent.Text = dgv.Cells[4].Value.ToString();
+                
+            }
+        }
     }
 }
