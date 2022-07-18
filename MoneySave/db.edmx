@@ -4,15 +4,17 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="GestorDeGastos.BO.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="GestorDeGastosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Cuenta">
           <Key>
             <PropertyRef Name="IdCuenta" />
           </Key>
           <Property Name="Name" Type="varchar" MaxLength="50" />
-          <Property Name="IdCuenta" Type="int" Nullable="false" />
+          <Property Name="IdCuenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdUsuario" Type="int" />
           <Property Name="Monto" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="250" />
+          <Property Name="CreatedDate" Type="datetime" />
         </EntityType>
         <EntityType Name="Gasto">
           <Key>
@@ -158,7 +160,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="GestorDeGastosBOStoreContainer">
+        <EntityContainer Name="GestorDeGastosModelStoreContainer">
           <EntitySet Name="Cuenta" EntityType="Self.Cuenta" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Gasto" EntityType="Self.Gasto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ingreso" EntityType="Self.Ingreso" Schema="dbo" store:Type="Tables" />
@@ -199,15 +201,17 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="GestorDeGastos.BO" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="GestorDeGastosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Cuenta">
           <Key>
             <PropertyRef Name="IdCuenta" />
           </Key>
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="IdCuenta" Type="Int32" Nullable="false" />
+          <Property Name="IdCuenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdUsuario" Type="Int32" />
           <Property Name="Monto" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK_Cuenta_Usuario" FromRole="Cuenta" ToRole="Usuario" />
           <NavigationProperty Name="Gastoes" Relationship="Self.FK_Gasto_Cuenta" FromRole="Cuenta" ToRole="Gasto" />
           <NavigationProperty Name="Ingresoes" Relationship="Self.FK_Ingreso_Cuenta" FromRole="Cuenta" ToRole="Ingreso" />
@@ -367,7 +371,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="GestorDeGastosEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="GestorDeGastosEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Cuentas" EntityType="Self.Cuenta" />
           <EntitySet Name="Gastoes" EntityType="Self.Gasto" />
           <EntitySet Name="Ingresoes" EntityType="Self.Ingreso" />
@@ -409,19 +413,21 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="GestorDeGastosBOStoreContainer" CdmEntityContainer="GestorDeGastosEntities1">
+        <EntityContainerMapping StorageEntityContainer="GestorDeGastosModelStoreContainer" CdmEntityContainer="GestorDeGastosEntities2">
           <EntitySetMapping Name="Cuentas">
-            <EntityTypeMapping TypeName="GestorDeGastos.BO.Cuenta">
+            <EntityTypeMapping TypeName="GestorDeGastosModel.Cuenta">
               <MappingFragment StoreEntitySet="Cuenta">
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="IdCuenta" ColumnName="IdCuenta" />
                 <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
                 <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Gastoes">
-            <EntityTypeMapping TypeName="GestorDeGastos.BO.Gasto">
+            <EntityTypeMapping TypeName="GestorDeGastosModel.Gasto">
               <MappingFragment StoreEntitySet="Gasto">
                 <ScalarProperty Name="IdGasto" ColumnName="IdGasto" />
                 <ScalarProperty Name="Fecha" ColumnName="Fecha" />
@@ -434,7 +440,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Ingresoes">
-            <EntityTypeMapping TypeName="GestorDeGastos.BO.Ingreso">
+            <EntityTypeMapping TypeName="GestorDeGastosModel.Ingreso">
               <MappingFragment StoreEntitySet="Ingreso">
                 <ScalarProperty Name="IdIngreso" ColumnName="IdIngreso" />
                 <ScalarProperty Name="Fecha" ColumnName="Fecha" />
@@ -447,7 +453,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="GestorDeGastos.BO.sysdiagram">
+            <EntityTypeMapping TypeName="GestorDeGastosModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -458,7 +464,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Tipogastoes">
-            <EntityTypeMapping TypeName="GestorDeGastos.BO.Tipogasto">
+            <EntityTypeMapping TypeName="GestorDeGastosModel.Tipogasto">
               <MappingFragment StoreEntitySet="Tipogasto">
                 <ScalarProperty Name="IdTipoGasto" ColumnName="IdTipoGasto" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -466,7 +472,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TipoIngresoes">
-            <EntityTypeMapping TypeName="GestorDeGastos.BO.TipoIngreso">
+            <EntityTypeMapping TypeName="GestorDeGastosModel.TipoIngreso">
               <MappingFragment StoreEntitySet="TipoIngreso">
                 <ScalarProperty Name="IdTipoIngreso" ColumnName="IdTipoIngreso" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -474,7 +480,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Usuarios">
-            <EntityTypeMapping TypeName="GestorDeGastos.BO.Usuario">
+            <EntityTypeMapping TypeName="GestorDeGastosModel.Usuario">
               <MappingFragment StoreEntitySet="Usuario">
                 <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />

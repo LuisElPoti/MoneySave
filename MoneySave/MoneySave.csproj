@@ -274,6 +274,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="db.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>db.edmx</DependentUpon>
@@ -285,6 +288,5 @@
       <LastGenOutput>db.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,10 +13,10 @@ namespace MoneySave
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class GestorDeGastosEntities1 : DbContext
+    public partial class GestorDeGastosEntities2 : DbContext
     {
-        public GestorDeGastosEntities1()
-            : base("name=GestorDeGastosEntities1")
+        public GestorDeGastosEntities2()
+            : base("name=GestorDeGastosEntities2")
         {
         }
     

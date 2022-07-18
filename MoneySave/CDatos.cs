@@ -12,12 +12,12 @@ namespace MoneySave
 {
     public class CDatos
     {
-        GestorDeGastosEntities1 db;
+        GestorDeGastosEntities2 db;
         public void Create(Cuenta pCuenta)
         {
             try
             {
-                using (db = new GestorDeGastosEntities1())
+                using (db = new GestorDeGastosEntities2())
                 {
                     db.Cuentas.Add(pCuenta);
                     db.SaveChanges();
@@ -25,7 +25,6 @@ namespace MoneySave
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
             
@@ -34,7 +33,7 @@ namespace MoneySave
         {
             try
             {
-                using (db = new GestorDeGastosEntities1())
+                using (db = new GestorDeGastosEntities2())
                 {
                     return db.Cuentas.ToList();
                 }
@@ -50,7 +49,7 @@ namespace MoneySave
         {
             try
             {
-                using (db = new GestorDeGastosEntities1())
+                using (db = new GestorDeGastosEntities2())
                 {
                     db.Entry(pCuenta).State=EntityState.Modified;
                     db.SaveChanges();
@@ -66,7 +65,7 @@ namespace MoneySave
         {
             try
             {
-                using (db = new GestorDeGastosEntities1())
+                using (db = new GestorDeGastosEntities2())
                 {
                     db.Cuentas.Remove(db.Cuentas.Single(p => p.IdCuenta == pId));
                     db.SaveChanges();
@@ -82,7 +81,7 @@ namespace MoneySave
         {
             try
             {
-                using (db = new GestorDeGastosEntities1())
+                using (db = new GestorDeGastosEntities2())
                 {
                     return db.Cuentas.Where(p=> p.IdCuenta == pId).ToList();
                     
