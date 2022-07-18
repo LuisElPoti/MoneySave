@@ -12,6 +12,8 @@ namespace MoneySave
 {
     public partial class frmLogin : Form
     {
+        CUsuario usuario = new CUsuario();
+        Usuario user = new Usuario(); 
         public frmLogin()
         {
             InitializeComponent();

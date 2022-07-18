@@ -48,7 +48,7 @@
             this.btnAñadirCuenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAñadirCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAñadirCuenta.ForeColor = System.Drawing.Color.White;
-            this.btnAñadirCuenta.Location = new System.Drawing.Point(512, 478);
+            this.btnAñadirCuenta.Location = new System.Drawing.Point(518, 474);
             this.btnAñadirCuenta.Name = "btnAñadirCuenta";
             this.btnAñadirCuenta.Size = new System.Drawing.Size(97, 33);
             this.btnAñadirCuenta.TabIndex = 31;
@@ -70,7 +70,7 @@
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(457, 314);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 20);
+            this.textBox1.Size = new System.Drawing.Size(210, 22);
             this.textBox1.TabIndex = 29;
             // 
             // label5
@@ -80,7 +80,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(454, 358);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 18);
+            this.label5.Size = new System.Drawing.Size(57, 22);
             this.label5.TabIndex = 28;
             this.label5.Text = "Nota";
             // 
@@ -91,7 +91,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(454, 287);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 18);
+            this.label4.Size = new System.Drawing.Size(101, 22);
             this.label4.TabIndex = 27;
             this.label4.Text = "Cantidad";
             // 
@@ -101,7 +101,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(457, 247);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(210, 21);
+            this.comboBox2.Size = new System.Drawing.Size(210, 24);
             this.comboBox2.TabIndex = 26;
             // 
             // label3
@@ -111,7 +111,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(454, 220);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 18);
+            this.label3.Size = new System.Drawing.Size(137, 22);
             this.label3.TabIndex = 25;
             this.label3.Text = "Tipo de Gasto";
             // 
@@ -121,7 +121,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(457, 168);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(210, 21);
+            this.comboBox1.Size = new System.Drawing.Size(210, 24);
             this.comboBox1.TabIndex = 24;
             // 
             // label1
@@ -131,7 +131,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(454, 141);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 18);
+            this.label1.Size = new System.Drawing.Size(81, 22);
             this.label1.TabIndex = 23;
             this.label1.Text = "Cuenta";
             // 
@@ -140,9 +140,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(463, 90);
+            this.label2.Location = new System.Drawing.Point(450, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(186, 28);
+            this.label2.Size = new System.Drawing.Size(233, 37);
             this.label2.TabIndex = 22;
             this.label2.Text = "Agregar Gasto";
             // 
