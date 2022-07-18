@@ -89,7 +89,8 @@ namespace MoneySave
             {
                 if (txtpass.Text != "CONTRASEÑA")
                 {
-
+                    CUsuario usuario = new CUsuario();
+                    
                 }
             }
         }

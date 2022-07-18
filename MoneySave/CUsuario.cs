@@ -12,7 +12,9 @@ namespace MoneySave
 {
     internal class CUsuario
     {
+
         GestorDeGastosEntities2 db;
+       
         public void Create(Usuario pUsuario)
         {
             try
@@ -94,5 +96,6 @@ namespace MoneySave
                 return null;
             }
         }
+       
     }
 }
