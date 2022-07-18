@@ -37,7 +37,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::MoneySave.Properties.Resources.pngtree_purple_money_bag_gold_coins_save_money_business_illustration_png_image_3180384;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(98, 125);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(333, 306);
@@ -52,7 +52,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(635, 125);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(275, 30);
+            this.label1.Size = new System.Drawing.Size(346, 38);
             this.label1.TabIndex = 1;
             this.label1.Text = "¿Qué es MoneySaves?";
             // 
@@ -67,6 +67,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(390, 205);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // frmInicio
             // 

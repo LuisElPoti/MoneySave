@@ -313,13 +313,14 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(433, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(255, 21);
+            this.label1.Size = new System.Drawing.Size(318, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "MoneySaves © CopyRight 2022 ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // frmMenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 650);
             this.Controls.Add(this.panel6);

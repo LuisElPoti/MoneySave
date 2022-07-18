@@ -284,6 +284,11 @@
       <DependentUpon>db.edmx</DependentUpon>
       <LastGenOutput>db.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\CERRAR NEGRO.png" />
+    <None Include="Resources\PANTALLA COMPLETA NEGRO.png" />
+    <None Include="Resources\MINIMIZAR NEGRO.png" />
+    <None Include="Resources\linea.png" />
+    <None Include="Resources\img2.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

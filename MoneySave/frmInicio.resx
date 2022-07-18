@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>MoneySaves es una aplicación web que te permite el control de flujo de tus egresos e ingresos. A traves de varios modulos y calculos sencillos con una interfaz integra y facil de utilizar para todos nuestros StrakesHolders.
+    <value>MoneySaves es una aplicación web que te permite el control de flujo de tus egresos e ingresos. A través de varios modulos y cálculos sencillos con una interfaz integra y fácil de utilizar para todos nuestros StrakesHolders. 
 
-Ademas de estos ofrecemos visualización de transacciones, registro de cuenta y armadores de presupuesto. Todo esto de forma totalmente gratuita! </value>
+Además de estos ofrecemos visualización de transacciones, registro de cuenta y armadores de presupuesto. ¡Todo esto de forma totalmente gratuita! </value>
   </data>
 </root>

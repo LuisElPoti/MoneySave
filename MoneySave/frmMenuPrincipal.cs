@@ -78,6 +78,11 @@ namespace MoneySave
             AbrirFormHija(new frmReporte());
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void AbrirFormHija(object formhija)
         {
             if (this.pnlContenedor.Controls.Count > 0)
