@@ -63,6 +63,16 @@ namespace MoneySave.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _16_169348_user_icon_user_white_icon_transparent_clipart {
+            get {
+                object obj = ResourceManager.GetObject("16-169348_user-icon-user-white-icon-transparent-clipart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cerrar {
             get {
                 object obj = ResourceManager.GetObject("cerrar", resourceCulture);
@@ -126,6 +136,16 @@ namespace MoneySave.Properties {
         internal static System.Drawing.Bitmap icons8_obtener_ingresos_50__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-obtener-ingresos-50 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_usuario_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-usuario-30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

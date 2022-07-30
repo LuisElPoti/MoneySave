@@ -12,8 +12,7 @@ namespace MoneySave
 {
     public partial class frmLogin : Form
     {
-        CUsuario usuario = new CUsuario();
-        Usuario user = new Usuario(); 
+       
         public frmLogin()
         {
             InitializeComponent();
@@ -89,7 +88,7 @@ namespace MoneySave
             {
                 if (txtpass.Text != "CONTRASEÑA")
                 {
-                    CUsuario usuario = new CUsuario();
+                    //CUsuario usuario = new CUsuario();
                     
                 }
             }
